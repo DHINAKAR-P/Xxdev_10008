@@ -1,0 +1,13 @@
+<div class="container screen">
+    <div class="row" style="padding-top: 46px">
+    <div class="col-lg-2 "><button class="btn btn-primary" (click)="get_all_Emaildata()" style="width: 100%;">GetAll</button>
+    </div>
+    <div class="col-lg-2 "><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">Cancel</button></a>
+    </div>
+    </div>
+    <div class="row" style="padding-top: 87px">
+    <div class="col-lg-4 "><ag-grid-angular #Table_103251Grid style="width: 100%; height: 258px;" class="ag-fresh" [gridOptions]="Table_103251GridOptions" [rowData]="array_Emaildata"></ag-grid-angular>
+    </div>
+    </div>
+
+</div>

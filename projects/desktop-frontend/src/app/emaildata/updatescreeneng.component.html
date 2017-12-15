@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="row" style="padding-top: 106px">
+        <div class="col-lg-1 "><label class="generated-label">SenderName</label>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1"><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="emaildata.sendername"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 86px">
+        <div class="col-lg-1 "><label class="generated-label">ToName</label>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1"><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="emaildata.receivername"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 97px">
+        <div class="col-lg-2 col-lg-offset-3"><button class="btn btn-primary" (click)="update_Emaildata()" style="width: 100%;">update</button>
+        </div>
+        <div class="col-lg-2 "><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">cancel</button></a>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 65px">
+        <div class="col-lg-2 col-lg-offset-4"><button class="btn btn-primary" (click)="delete_Emaildata()" style="width: 100%;">Remove</button>
+        </div>
+        </div>
+
+    </div>
+</section>
+<modal #modalSFU>
+	<modal-header [show-close]="true">
+		<h4 class="modal-title">ID required!</h4>
+	</modal-header>
+	<modal-body>
+		<mat-input-container><input matInput placeholder="Emaildata ID" [(ngModel)]="emaildata.id"></mat-input-container>
+	</modal-body>
+	<modal-footer>
+		<button type="button" class="btn btn-default" data-dismiss="modal" (click)="modalSFU.dismiss()">Cancel</button>
+		<button type="button" class="btn btn-primary" (click)="search_for_update_Emaildata()">Get Emaildata</button>
+	</modal-footer>
+</modal>

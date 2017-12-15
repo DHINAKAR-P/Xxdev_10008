@@ -1,0 +1,96 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Xxdev
+host: 52.175.215.67:9090
+basePath: /Xxdev_10008
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /Emaildata_Default_Activity/Emaildata:
+    put:
+      description: Update Emaildata
+      parameters:
+        - name: emaildata
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Emaildata'
+      responses:
+        "200":
+          description: Success
+    get:
+      description: Get all Emaildata
+      responses:
+        "200":
+          description: Success
+    post:
+      description: Create Emaildata
+      parameters:
+        - name: emaildata
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Emaildata'
+      responses:
+        "201":
+          description: Success
+  /Emaildata_Default_Activity/Emaildata/{EmaildataId}:
+    get:
+      description: Get Emaildata by id
+      parameters:
+        - name: EmaildataId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "200":
+          description: Success
+    delete:
+      description: Delete Emaildata
+      parameters:
+        - name: EmaildataId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "204":
+          description: Success
+    get:
+      description: Get Emaildata by id
+      parameters:
+        - name: EmaildataId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "200":
+          description: Success
+
+definitions:
+  Emaildata:
+    required:
+      - sendername
+      - receivername
+
+    properties:
+      id:
+        type: integer
+      sendername:
+        type: string
+      receivername:
+        type: string

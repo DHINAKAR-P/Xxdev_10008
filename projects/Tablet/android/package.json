@@ -1,0 +1,29 @@
+{
+  "name": "ionic-app-base",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": false,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "geppetto_tablet_android":"2.0.0"
+  },
+
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {}
+        },
+        "platforms": [
+            "ios"
+        ]
+    }
+}
