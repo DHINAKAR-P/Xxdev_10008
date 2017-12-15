@@ -40,13 +40,13 @@ executeXcodeIpaBuildTablet(){
 
 #this cd refer inside the project dir in mac mini desktop
 
-cd  Xxdev_10008
+cd  Xxdev_10008/projects/Tablet/ios/Xxdev_10008/
 
 /bin/sh -c "sleep 10 ; echo IOS_Platform_Removed"
 
 /bin/sh -c "sleep 10 ; echo installing NPM "
 
-npm install
+npm install --loglevel info
 
 /bin/sh -c "sleep 10 ; echo Building Ionic"
 
